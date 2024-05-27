@@ -35,7 +35,7 @@ public class RealizedWorkService implements IRealizedWorkService{
   public RealizedWork editRealizedWork(RealizedWork realizedWork) {
     RealizedWork realizedWorkToEdit = realizedWorkRepository.findById(realizedWork.getId()).orElse(null);
     realizedWorkToEdit.setName(realizedWork.getName());
-    realizedWorkToEdit.setImages(realizedWork.getImages());
+    realizedWorkToEdit.setImage(realizedWork.getImage());
     realizedWorkToEdit.setDescription(realizedWork.getDescription());
     return realizedWorkRepository.save(realizedWork);
   }

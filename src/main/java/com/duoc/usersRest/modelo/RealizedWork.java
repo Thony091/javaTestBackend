@@ -1,8 +1,6 @@
 package com.duoc.usersRest.modelo;
 
-import java.util.List;
 
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,7 +21,6 @@ public class RealizedWork {
   Integer id;
   String name;
   String description;
-  @ElementCollection
-  List<String> images;
+  String image;
   
 }

@@ -34,8 +34,7 @@ public class UsuarioServicio implements IUsuarioServicio{
 
   @Override
   public Usuario editarUsuario(Usuario usuario) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'editUsuario'");
+    return usuarioRepositorio.save(usuario);
   }
 
   @Override

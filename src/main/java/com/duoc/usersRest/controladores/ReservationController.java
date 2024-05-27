@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -42,7 +43,7 @@ public class ReservationController {
   }
   
   @PostMapping("/crear-reserva")
-  public Reservation crearReserva(Reservation reservation) {
+  public Reservation crearReserva(@RequestBody Reservation reservation) {
     var reservationCreated = reservationService.saveReservation(reservation);
     logger.info(reservationCreated.toString());
     return reservationCreated;
